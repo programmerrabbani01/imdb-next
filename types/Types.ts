@@ -5,3 +5,6 @@ export type HeaderProps = {
   address: string;
   Icon: React.ComponentType;
 };
+export type ProviderProps = {
+  children: React.ReactNode;
+};
