@@ -22,3 +22,7 @@ export type SearchParamsProps = {
 export type HomeProps = {
   searchParams: SearchParamsProps;
 };
+export type ErrorProps = {
+  error: Error;
+  reset: () => void;
+};

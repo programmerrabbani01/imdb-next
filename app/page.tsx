@@ -19,11 +19,9 @@ export default async function Home({ searchParams }: HomeProps) {
 
   const result = data.results;
 
-
-
-  return <>
-  
-  <Results result={result}/>
-  
-  </>;
+  return (
+    <>
+      <Results result={result} />
+    </>
+  );
 }
