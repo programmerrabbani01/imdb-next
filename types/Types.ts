@@ -14,3 +14,11 @@ export type NavBarProps = {
   title: string;
   param: "fetchTrending" | "fetchTopRated";
 };
+
+export type SearchParamsProps = {
+  genre?: string;
+};
+
+export type HomeProps = {
+  searchParams: SearchParamsProps;
+};
