@@ -46,3 +46,9 @@ export type ResultProps = {
 export type CardProps = {
   results: Result;
 };
+
+export type MovieSingleProps = {
+  params: {
+    id: string;
+  };
+};
