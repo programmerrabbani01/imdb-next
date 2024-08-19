@@ -1,7 +1,7 @@
 import Results from "@/components/Results/Results.tsx";
 import { SearchProps } from "@/types/Types.ts";
 
-export default async function SearchPage({ params }:SearchProps) {
+export default async function SearchPage({ params }: SearchProps) {
   const searchId = params.searchId;
 
   const response = await fetch(
@@ -13,15 +13,13 @@ export default async function SearchPage({ params }:SearchProps) {
 
   return (
     <>
-      {results &&
-        results.length ===
-        (
-          <div className="text-center text-xl font-medium pt-6">
-            No results found.
-          </div>
-        )}
-
-      {results && <Results result={results} />}
+      {results && results.length === 0 ? (
+        <div className="text-center text-xl font-medium pt-6">
+          No results found.
+        </div>
+      ) : (
+        <Results result={results} />
+      )}
     </>
   );
 }
