@@ -52,3 +52,9 @@ export type MovieSingleProps = {
     id: string;
   };
 };
+
+export type SearchProps = {
+  params: {
+    searchId: string;
+  };
+};
